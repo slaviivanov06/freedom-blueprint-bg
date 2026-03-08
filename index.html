@@ -1,1 +1,825 @@
-<!DOCTYPE html><html>test</html>
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freedom Blueprint — Разкрито: Най-бързият начин да печелиш пари онлайн</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0d0d0d; color: #fff; overflow-x: hidden; }
+
+  /* TOP BAR */
+  .top-bar {
+    background: linear-gradient(135deg, #ff6b00, #ff8c00);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(180deg, #1a0a00 0%, #0d0d0d 100%);
+    text-align: center;
+    padding: 60px 20px 50px;
+    border-bottom: 3px solid #ff6b00;
+  }
+  .hero .warning-tag {
+    display: inline-block;
+    background: #ff0000;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 6px 18px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .hero h1 span { color: #ff8c00; }
+  .hero h2 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 800;
+    color: #ffd700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .hero .sub {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 6px;
+  }
+
+  /* GIFT BOX */
+  .gift-box {
+    max-width: 800px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #1a3300, #0d1f00);
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 20px 28px;
+    font-size: 0.95rem;
+    color: #b8ffb8;
+    line-height: 1.5;
+  }
+  .gift-box strong { color: #ffd700; }
+
+  /* BULLETS HERO */
+  .bullets-hero {
+    max-width: 700px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: left;
+  }
+  .bullets-hero .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #e0e0e0;
+  }
+  .bullets-hero .item::before { content: '✅'; font-size: 1rem; flex-shrink: 0; }
+
+  /* CTA PRIMARY */
+  .cta-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff8c00, #ff6b00);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 20px 50px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 30px rgba(255, 140, 0, 0.5);
+    margin: 20px 0;
+    transition: transform 0.2s;
+    display: block;
+    max-width: 600px;
+    margin: 24px auto;
+    text-align: center;
+  }
+  .cta-primary:hover { transform: scale(1.02); }
+  .cta-sub { text-align: center; font-size: 0.78rem; color: #888; margin-top: -14px; }
+
+  /* TESTIMONIALS STRIP */
+  .testi-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .testi-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #ff8c00;
+  }
+  .testi-card .amount { font-size: 1.6rem; font-weight: 900; color: #ffd700; margin-bottom: 6px; }
+  .testi-card .quote { font-size: 0.82rem; color: #aaa; font-style: italic; }
+
+  /* SECTION */
+  section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+  section.dark { background: #111; }
+  section.darker { background: #0a0a0a; }
+
+  h2.section-title {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+  h2.section-title span { color: #ff8c00; }
+  h2.section-title .yellow { color: #ffd700; }
+
+  .pain-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  .pain-intro strong { color: #fff; }
+
+  .pain-list { list-style: none; margin: 16px 0 24px 0; }
+  .pain-list li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #ddd;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .pain-list li::before { content: '❌'; position: absolute; left: 0; }
+
+  .highlight-box {
+    background: #1a1000;
+    border-left: 4px solid #ff8c00;
+    border-radius: 0 8px 8px 0;
+    padding: 18px 20px;
+    margin: 24px 0;
+    font-size: 0.95rem;
+    color: #e8c88a;
+    line-height: 1.7;
+  }
+
+  /* PHILIP */
+  .philip-section {
+    background: #111;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 20px 0;
+  }
+  .philip-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .philip-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff8c00, #ff6b00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  .philip-header h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+  .philip-header p { color: #ff8c00; font-size: 0.85rem; font-weight: 600; }
+
+  .timeline { margin: 20px 0; }
+  .timeline-item {
+    display: flex;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #222;
+  }
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: #ff8c00;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .timeline-text { font-size: 0.9rem; color: #bbb; line-height: 1.6; }
+
+  /* 3 STEPS */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .step-card {
+    background: #1a1a1a;
+    border-radius: 14px;
+    padding: 28px 22px;
+    text-align: center;
+    border-top: 4px solid #ff8c00;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #ff8c00;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 14px;
+  }
+  .step-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 10px; color: #ffd700; }
+  .step-card p { font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+
+  /* SYSTEM BULLETS */
+  .system-bullets { list-style: none; margin: 20px 0; }
+  .system-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #e0e0e0;
+  }
+  .system-bullets li::before { content: '⚡'; font-size: 1.1rem; }
+
+  /* BONUSES */
+  .bonus-cards { display: grid; gap: 16px; margin: 24px 0; }
+  .bonus-card {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .bonus-num {
+    background: #ff8c00;
+    color: #000;
+    font-weight: 900;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .bonus-card h4 { font-size: 0.98rem; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .bonus-card p { font-size: 0.82rem; color: #999; line-height: 1.5; }
+  .bonus-value { color: #ffd700; font-weight: 700; font-size: 0.8rem; margin-top: 6px; }
+
+  /* PRICING */
+  .pricing-box {
+    background: linear-gradient(135deg, #1a0a00, #0d0500);
+    border: 3px solid #ff8c00;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .pricing-box .old-price {
+    font-size: 1.1rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-bottom: 8px;
+  }
+  .pricing-box .price-tag {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffd700;
+    margin-bottom: 6px;
+  }
+  .pricing-box .price-sub {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 24px;
+  }
+
+  /* GUARANTEE */
+  .guarantee-box {
+    background: #0a1f0a;
+    border: 2px solid #4caf50;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    max-width: 700px;
+    margin: 30px auto;
+  }
+  .guarantee-box .shield { font-size: 3rem; margin-bottom: 12px; }
+  .guarantee-box h3 { font-size: 1.3rem; font-weight: 800; color: #4caf50; margin-bottom: 14px; }
+  .guarantee-box p { font-size: 0.9rem; color: #b0d0b0; line-height: 1.7; }
+
+  /* FAQ */
+  .faq { max-width: 800px; margin: 0 auto; }
+  .faq-item {
+    background: #111;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 18px 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    border-left: 4px solid #ff8c00;
+    background: #1a1a1a;
+  }
+  .faq-a {
+    padding: 16px 20px;
+    font-size: 0.88rem;
+    color: #bbb;
+    line-height: 1.7;
+    border-left: 4px solid #333;
+  }
+
+  /* FOOTER */
+  .footer-cta {
+    background: linear-gradient(135deg, #1a0a00, #0d0500);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 3px solid #ff8c00;
+  }
+  .footer-final {
+    background: #080808;
+    text-align: center;
+    padding: 24px;
+    font-size: 0.75rem;
+    color: #444;
+  }
+
+  /* SCARCITY */
+  .scarcity-bar {
+    background: #1a0000;
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #ff8080;
+    font-weight: 600;
+  }
+  .scarcity-bar strong { color: #ff4444; }
+
+  /* DIVIDER */
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff8c00, transparent);
+    margin: 40px 0;
+  }
+
+  @media (max-width: 600px) {
+    .bullets-hero { grid-template-columns: 1fr; }
+    .philip-header { flex-direction: column; text-align: center; }
+    .pricing-box { padding: 28px 20px; }
+    .pricing-box .price-tag { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  ⚠️ Не споделяй! Тази тайна система може да ти носи €179.77 на ден ⚠️
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="warning-tag">🔒 Строго поверително</div>
+  <h1>Разкрито: <span>Най-бързият начин</span><br>да печелиш пари онлайн</h1>
+  <h2>Тази тайна система може да ти носи<br>€179.77 всеки един ден!</h2>
+
+  <div class="gift-box">
+    🎁 <strong>БЕЗПЛАТЕН ПОДАРЪК:</strong> Първите 150 купувача получават и нашето обучение <strong>"€100–€500 на ден"</strong> напълно безплатно <strong>(стойност €199)</strong> — нашите студенти <strong>удвоиха приходите си</strong> с него!
+  </div>
+
+  <div class="bullets-hero">
+    <div class="item">Изключително лесно за начинаещи</div>
+    <div class="item">Студентите виждат резултати на същия ден</div>
+    <div class="item">Настройваш го веднъж — работи завинаги</div>
+    <div class="item">Никой досега не го е правил...ТОЧКА!</div>
+    <div class="item">Зад него стои отличен маркетър</div>
+    <div class="item">Изживей истинския начин на живот с лаптоп</div>
+    <div class="item">Настройка само за МИНУТИ</div>
+    <div class="item">Резултати — или връщаме парите ти</div>
+  </div>
+
+  <a href="#pricing" class="cta-primary">🚀 Вземи Freedom Blueprint сега — само €1.30!</a>
+  <p class="cta-sub">Гарантиран 30-дневен срок за връщане на парите · Плащаш еднократно · Ползваш завинаги</p>
+</div>
+
+<!-- TESTIMONIALS STRIP -->
+<div style="background:#111; padding:40px 20px;">
+  <h2 style="text-align:center; font-size:1.1rem; color:#888; text-transform:uppercase; letter-spacing:1px; margin-bottom:24px;">Какво постигнаха нашите студенти</h2>
+  <div class="testi-strip">
+    <div class="testi-card">
+      <div class="amount">€39,000</div>
+      <div class="quote">"От €6,000 дълг до €39,000 за 9 месеца!"</div>
+    </div>
+    <div class="testi-card">
+      <div class="amount">€35,000</div>
+      <div class="quote">"От претоварена самотна майка до €35,000 за 9 месеца"</div>
+    </div>
+    <div class="testi-card">
+      <div class="amount">€230</div>
+      <div class="quote">"Получих известие за €230 направо по сметката!"</div>
+    </div>
+    <div class="testi-card">
+      <div class="amount">€23,000</div>
+      <div class="quote">"Мога да плащам за пътувания на семейството си. Невероятно!"</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section>
+  <h2 class="section-title">Скъпи начинаещ,<br><span>разпознаваш ли себе си в това?</span></h2>
+
+  <p class="pain-intro">
+    Годините летят, нали? Но все още ли се намираш на нулата, <strong>без да спечелиш нито лев онлайн?</strong> Желаеш ли да попаднеш на нещо, което най-накрая ще работи?
+  </p>
+
+  <p class="pain-intro" style="color:#ff8c00; font-weight:700;">Предполагам, че:</p>
+  <ul class="pain-list">
+    <li>Отчаяно искаш да успееш...</li>
+    <li>Изморен си да те мамят…</li>
+    <li>Купуваш продукт след продукт без резултат…</li>
+  </ul>
+
+  <p class="pain-intro">Разбирам те — и аз съм бил там.</p>
+  <p class="pain-intro">Знам колко е изтощително и съкрушително...</p>
+
+  <p class="pain-intro" style="color:#ff8c00; font-weight:700;">Говоря за:</p>
+  <ul class="pain-list">
+    <li>Безкрайни безсънни нощи…</li>
+    <li>Емоционални върхове и смазващи дъна…</li>
+    <li>Да се удавяш в дългове…</li>
+    <li>Едва да свързваш двата края…</li>
+    <li>Да разчиташ на помощи само за да оцелееш…</li>
+  </ul>
+
+  <div class="highlight-box">
+    Това не е само финансово бреме — то нанася огромен емоционален удар. И сигурно се е отразило и на личния ти живот, нали?<br><br>
+    Нека бъда абсолютно ясен: <strong>Не е твоя вина!</strong><br><br>
+    Може да си задавал трудни, дори мрачни въпроси...<br>
+    <em>"Правя ли достатъчно?" · "Направен ли съм за това?" · "Просто не съм достатъчно добър?"</em><br><br>
+    И аз съм бил там, с тези мисли в главата си. <strong>Но истината е: НЕ Е твоя вина!</strong>
+  </div>
+</section>
+
+<!-- RIGGED SYSTEM -->
+<div style="background:#111; padding:60px 20px;">
+<section style="padding:0;">
+  <h2 class="section-title">Защото играта е <span>наредена срещу теб</span> от самото начало...</h2>
+
+  <p class="pain-intro">Проектирана е точно така от деня първи. Единствените, които печелят, са тези, които знаят скритите тайни… докато всички останали се борят за трохите.</p>
+
+  <p class="pain-intro">Така че спри да се самоукоряваш. <strong>Бил си подведен. ТОЧКА.</strong> И тези лъжи са те държали на едно място.</p>
+
+  <p class="pain-intro" style="color:#4caf50; font-weight:700; font-size:1.1rem;">Но не е задължително да е така...</p>
+
+  <p class="pain-intro"><strong>Ами ако можеш да:</strong></p>
+  <ul class="pain-list" style="">
+    <li style="border-color:#333;">✅ Спреш да купуваш продукти без резултат</li>
+    <li style="border-color:#333;">✅ Най-накрая постигнеш своя пробив</li>
+    <li style="border-color:#333;">✅ Спреш да се тревожиш за пари</li>
+    <li style="border-color:#333;">✅ Живееш живота на свободен човек с лаптоп</li>
+  </ul>
+
+  <p class="pain-intro" style="color:#ffd700; font-size:1.2rem; font-weight:800; text-align:center; margin-top:30px;">Тогава си попаднал на правилното място…</p>
+</section>
+</div>
+
+<!-- PHILIP STORY -->
+<section>
+  <div class="philip-section">
+    <div class="philip-header">
+      <div class="philip-avatar">👨</div>
+      <div>
+        <h3>Здравей, аз съм Филип!</h3>
+        <p>🏆 Отличен маркетър с международно признание</p>
+      </div>
+    </div>
+
+    <p class="pain-intro">Като много от вас, и аз се борих в началото. Бях просто беден водопроводчик, живеещ от заплата до заплата, търсещ начин да избягам от тази рутина.</p>
+
+    <p class="pain-intro">Но всеки път, когато мислех, че съм намерил решение, се оказваше поредният фалшив продукт, който ме оставяше по-зле от преди.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-text"><strong>2013 г.</strong> — Заседнал в безперспективна водопроводна работа. Ставах в 6 сутринта, чистих тръби, прибирах се физически изтощен. Ден след ден, без изход.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-text"><strong>Провал след провал</strong> — Изпробвах безброй методи. Bitcoin, Shopify магазин, партньорски мрежи. Нищо не работеше достатъчно добре. Бях стресиран, депресиран, объркан.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-text"><strong>Платих €2,500 за коучинг</strong> — Знаех, че нещо ми липсва. Исках да разбера какво скриват гурутата. И научих нещо изключително просто.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:#4caf50;"></div>
+        <div class="timeline-text"><strong>Пробивът</strong> — Открих метода, който сега преподавам в Freedom Blueprint. Спечелих <strong>€23,000 за 6 месеца</strong>, намалих работното си време наполовина и най-накрая постигнах свободата, която толкова дълго търсех.</div>
+      </div>
+    </div>
+
+    <p class="pain-intro" style="margin-top:20px;">Сега вярвам, че единственото истинско доказателство за успех е дали може да се повтори от другите. Затова съм толкова развълнуван да споделя тази система с теб.</p>
+  </div>
+</section>
+
+<!-- 2 THINGS -->
+<div style="background:#111; padding:60px 20px;">
+<section style="padding:0;">
+  <h2 class="section-title">Ето <span>само 2 неща</span>, от които се нуждаеш,<br>за да правиш пари онлайн:</h2>
+
+  <div class="steps" style="grid-template-columns:1fr 1fr; max-width:700px; margin:30px auto;">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Трафик</h3>
+      <p>Хора, на които да продаваш. Представи си магазин на оживена улица — хората, влизащи вътре, са трафикът. Нула трафик = нула пари.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>Нещо за продаване</h3>
+      <p>Нямаш собствен продукт? Без притеснение! Не е нужно да създаваш нищо. Просто промотирай продукти на другите и получавай големи комисиони!</p>
+    </div>
+  </div>
+
+  <p class="pain-intro" style="text-align:center; font-size:1.2rem; font-weight:800; color:#ffd700;">Имайки тези две неща — си практически непобедим!<br><span style="color:#aaa; font-size:0.9rem; font-weight:400;">Не е нужно да усложняваш нещата.</span></p>
+</section>
+</div>
+
+<!-- THE SYSTEM -->
+<section>
+  <h2 class="section-title">Въведи <span>Freedom Blueprint</span></h2>
+
+  <ul class="system-bullets">
+    <li>Вечнозелено — настрой го веднъж… продължавай да печелиш</li>
+    <li>Почти никой не го прави в момента</li>
+    <li>Бързи резултати — имаш ли 15 минути? Толкова е необходимо</li>
+    <li>Изключително приятелско за начинаещи</li>
+    <li>Настройка за 15 минути — после само 5–10 минути на ден</li>
+    <li>Мащабира се безкрайно</li>
+    <li>Даваме ти ТОЧНО СЪЩИТЕ инструменти, които ние използваме</li>
+    <li>Започни да виждаш €100 всеки ден!</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <h2 class="section-title" style="margin-top:0;">Спечели €100 на ден с<br><span>нашите 3 прости стъпки!</span></h2>
+
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>🎯 Доказани оферти</h3>
+      <p>Използвай нашата проста система, за да намериш горещи продукти за промотиране и да спечелиш ГОЛЕМИ комисиони. Дори ще ти кажем точно какво да продаваш!</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>🌊 Вортекс на трафика</h3>
+      <p>Влез в най-голямото traffic гравище на планетата. Всичко, което правиш, е да качваш снимки и видеа в приложение. Лесно като поръчка на пица!</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>💰 Залей сметката с пари</h3>
+      <p>Седни удобно и се наслади на безкрайните плащания по банковата ти сметка!</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<div style="background:#111; padding:60px 20px;">
+<section style="padding:0;">
+  <h2 class="section-title">Ето какво <span>получаваш:</span></h2>
+
+  <div class="bonus-cards">
+    <div class="bonus-card" style="border-color:#ff8c00; background:#1a0a00;">
+      <div class="bonus-num">ЯДРО</div>
+      <div>
+        <h4>Пълно обучение Freedom Blueprint от А до Я</h4>
+        <p>Просто копирай пътя към успех, следвайки стъпка по стъпка видео обучението, което те води през всичко — независимо от опита ти.</p>
+        <div class="bonus-value">Включено ✅</div>
+      </div>
+    </div>
+    <div class="bonus-card" style="border-color:#ff8c00; background:#1a0a00;">
+      <div class="bonus-num">ЯДРО</div>
+      <div>
+        <h4>Автоматизирано "Cheat" обучение</h4>
+        <p>С нашето plug & play обучение е буквално като измама — ще можеш да настройваш кампании за успех всеки път, използвайки нашите умни, но прости хакове!</p>
+        <div class="bonus-value">Включено ✅</div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-num">БОНУС 1</div>
+      <div>
+        <h4>Директен достъп до екипа на Freedom</h4>
+        <p>Като клиент получаваш достъп до нас лично! Правим се на разположение, за да гарантираме твоя успех. Никой не иска да видиш как успяваш повече от нас.</p>
+        <div class="bonus-value">Стойност €199 — БЕЗПЛАТНО</div>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-num">БОНУС 2</div>
+      <div>
+        <h4>Безплатно обучение "€100–€500 на ден"</h4>
+        <p>Как да се събудиш с допълнителни €100–€500 по банковата сметка всеки ден — без да създаваш продукт, без уебсайт, без лично да продаваш!</p>
+        <div class="bonus-value">Стойност €199 — БЕЗПЛАТНО</div>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-num">БОНУС 3</div>
+      <div>
+        <h4>Безплатно High Ticket обучение</h4>
+        <p>Събрахме обучение, за чието придобиване платихме €199, и решихме да ти го подарим като бонус. Платихме висока цена, за да не се налага ти!</p>
+        <div class="bonus-value">Стойност €199 — БЕЗПЛАТНО</div>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-num">БОНУС 4</div>
+      <div>
+        <h4>Нечестно предимство в бизнеса и живота</h4>
+        <p>Научи как да вземеш живота в собствените си ръце и да станеш успешен в интернет маркетинга.</p>
+        <div class="bonus-value">Стойност €99 — БЕЗПЛАТНО</div>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-num">БОНУС 5</div>
+      <div>
+        <h4>Моментално одобрение да промотираш Freedom Blueprint</h4>
+        <p>Спечели огромни комисиони на продажба, когато промотираш Freedom Blueprint — и вече имаш инструментите да го направиш!</p>
+        <div class="bonus-value">Стойност €9 — БЕЗПЛАТНО</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SOCIAL PROOF -->
+<section>
+  <h2 class="section-title">Нова система за <span>качване и печалба</span><br>прави пари за пълни начинаещи в рамките на 24 часа!</h2>
+
+  <div style="display:grid; gap:16px; margin:24px 0;">
+    <div style="background:#1a1a1a; border-radius:12px; padding:24px; border-left:4px solid #ffd700;">
+      <p style="font-size:1.1rem; font-weight:800; color:#ffd700; margin-bottom:8px;">"От €6,000 дълг до €39,000 за 9 месеца!"</p>
+      <p style="font-size:0.85rem; color:#aaa;">— Студент на Freedom Blueprint</p>
+    </div>
+    <div style="background:#1a1a1a; border-radius:12px; padding:24px; border-left:4px solid #ffd700;">
+      <p style="font-size:1.1rem; font-weight:800; color:#ffd700; margin-bottom:8px;">"Мога да плащам за пътувания на семейството ми навсякъде по света. Невероятно е!"</p>
+      <p style="font-size:0.85rem; color:#aaa;">— Студент на Freedom Blueprint</p>
+    </div>
+    <div style="background:#1a1a1a; border-radius:12px; padding:24px; border-left:4px solid #ffd700;">
+      <p style="font-size:1.1rem; font-weight:800; color:#ffd700; margin-bottom:8px;">"От претоварена самотна майка до €35,000 за 9 месеца"</p>
+      <p style="font-size:0.85rem; color:#aaa;">— Студент на Freedom Blueprint</p>
+    </div>
+    <div style="background:#1a1a1a; border-radius:12px; padding:24px; border-left:4px solid #ffd700;">
+      <p style="font-size:1.1rem; font-weight:800; color:#ffd700; margin-bottom:8px;">"Мамка му, току-що получих известие за €230 директно по сметката!"</p>
+      <p style="font-size:0.85rem; color:#aaa;">— Студент на Freedom Blueprint</p>
+    </div>
+  </div>
+</section>
+
+<!-- STILL UNSURE -->
+<div style="background:#111; padding:60px 20px;">
+<section style="padding:0;">
+  <h2 class="section-title">Все още <span>не си сигурен?</span></h2>
+
+  <p class="pain-intro">Напълно те разбирам. В наши дни пазарът може да изглежда като хазарт, пълен с блестящи заглавия, водещи до генерични, некачествени продукти.</p>
+
+  <p class="pain-intro">Затова и създадохме Freedom Blueprint. Изморихме се да виждаме как неетични продавачи се възползват от хора, които просто се опитват да изкарат прехраната си.</p>
+
+  <div class="highlight-box" style="border-color:#4caf50; background:#0a1f0a; color:#b8ffb8;">
+    <strong style="color:#4caf50;">Ето истината:</strong> Ако знаеш това, което ние знаем — колко е невероятно трудно да се провалиш с тази система — щеше да се присъединиш веднага.<br><br>
+    Успехът изисква само едно нещо: <strong>действие</strong>. Никой метод, система или софтуер няма да работи, ако не си готов да направиш първата стъпка.<br><br>
+    Но ако следваш нашето проверено ръководство стъпка по стъпка — имаш реална възможност да промениш живота си <strong>ДНЕС.</strong>
+  </div>
+</section>
+</div>
+
+<!-- PRICING -->
+<div id="pricing" style="background:#0d0500; padding:60px 20px;">
+<section style="padding:0;">
+  <h2 class="section-title">Вземи <span>Freedom Blueprint</span><br>на специална цена!</h2>
+
+  <p class="pain-intro" style="text-align:center;">Преди само няколко седмици предлагахме тази система на нашите коучинг студенти за <strong style="text-decoration:line-through; color:#666;">€99</strong> — и те си върнаха цялата инвестиция само за около седмица!</p>
+  <p class="pain-intro" style="text-align:center;">Но разбираме, че не всеки има бюджет за €110... Затова решихме да направим тази невероятна възможност достъпна за колкото се може повече хора…</p>
+
+  <div class="pricing-box">
+    <div class="old-price">€19 месечно</div>
+    <div class="price-tag">€1.30</div>
+    <div class="price-sub">Еднократно плащане · Ползваш завинаги · Без скрити такси</div>
+    <p style="color:#aaa; font-size:0.85rem; margin-bottom:24px;">По-малко от цената на кафе — за система, която може да промени живота ти!</p>
+    <a href="#" class="cta-primary" style="max-width:100%; margin:0;">⚡ ДА! Искам Freedom Blueprint сега!</a>
+    <p style="color:#888; font-size:0.75rem; margin-top:12px;">30-дневна гаранция за връщане на парите · Сигурно плащане</p>
+  </div>
+
+  <div class="scarcity-bar">
+    ⏰ <strong>ВАЖНО:</strong> Нашата уникална система може да стане наситена, ако твърде много хора започнат да я използват. Ще затворим достъпа скоро — <strong>ако искаш да влезеш, действай бързо!</strong>
+  </div>
+</section>
+</div>
+
+<!-- GUARANTEE -->
+<section>
+  <div class="guarantee-box">
+    <div class="shield">🛡️</div>
+    <h3>Защитен си с нашата 30-дневна гаранция за връщане на парите</h3>
+    <p>Просто. Не искам нищо да те спира да се сдобиеш с Freedom Blueprint, затова го правя <strong>100% БЕЗ РИСК</strong>.<br><br>
+    Freedom Blueprint е изпитан и доказан, но в малко вероятния случай, че не успееш да го накараш да работи за теб и нашият екип за поддръжка не може да реши проблема ти — ще ти върнем цялата инвестиция без въпроси.<br><br>
+    Правя ти тази неустоима оферта, защото знам колко добре работи Freedom Blueprint. Резултатите идват бързо. Резултатите идват всеки път. И не е нужно да инвестираш ръка и крак, за да започнеш.</p>
+  </div>
+</section>
+
+<!-- WHY WAIT -->
+<div style="background:#111; padding:60px 20px; text-align:center;">
+  <h2 class="section-title">Защо изобщо <span>да чакаш?</span></h2>
+  <p class="pain-intro" style="text-align:center; max-width:700px; margin:0 auto 30px;">Всеки ден, прекаран в чакане, е поредният ден, в който оставяш пари на масата — пари, които някой друг взима вместо теб. И не забравяй — цената може да се покачи по всяко време.</p>
+  <p class="pain-intro" style="text-align:center; max-width:700px; margin:0 auto 30px; color:#ffd700; font-weight:700; font-size:1.1rem;">Така че ето го — решението е твое.</p>
+  <a href="#pricing" class="cta-primary" style="max-width:600px;">🚀 Вземи Freedom Blueprint — €1.30 еднократно!</a>
+  <p class="cta-sub" style="margin-top:10px;">30-дневна гаранция · Сигурно плащане · Моментален достъп</p>
+</div>
+
+<!-- FAQ -->
+<section>
+  <h2 class="section-title">Имаш ли <span>въпроси?</span> Без притеснение!</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">В: Наистина ли работи Freedom Blueprint?</div>
+      <div class="faq-a">О: ДА! Ако все още се съмняваш, вероятно е защото си бил разочарован от всички безполезни продукти, купени преди, които не ти дали нищо. Точно затова предлагаме пълен 30-дневен тест, за да изживееш сам животопроменящите резултати.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">В: Колко бързо ще започна да печеля?</div>
+      <div class="faq-a">О: Зависи изцяло от теб! Някои от нашите потребители са започнали да печелят в рамките на ЧАСОВЕ.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">В: Ако е толкова лесно, защо не го пазите само за себе си?</div>
+      <div class="faq-a">О: Защото пазарът все още не е наситен и има достатъчно място за всички. Въпреки това ЩЕ затворим достъпа за нови потребители, щом видим признаци на насищане.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">В: Има ли гаранция?</div>
+      <div class="faq-a">О: Абсолютно. Предлагаме 30-дневна гаранция за връщане на парите. Ако приложиш програмата и не постигнеш резултати, просто ни пиши на имейла за поддръжка в рамките на 30 дни и ще ти върнем парите с усмивка.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">В: Какво ако имам нужда от помощ?</div>
+      <div class="faq-a">О: Имаме те! В членската зона има линк за поддръжка, където нашият екип е готов да ти помогне.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">В: Защо плащането ми не минава?</div>
+      <div class="faq-a">О: Ако срещнеш проблем с PayPal, можеш да платиш и директно с карта — без да е нужен PayPal акаунт.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <h2 style="font-size:clamp(1.5rem,4vw,2.5rem); font-weight:900; margin-bottom:16px;">Вземи <span style="color:#ff8c00;">Freedom Blueprint</span><br>на специална еднократна цена</h2>
+  <p style="color:#666; font-size:0.9rem; text-decoration:line-through; margin-bottom:4px;">€19 на месец</p>
+  <p style="color:#ffd700; font-size:2.5rem; font-weight:900; margin-bottom:20px;">€1.30 еднократно · Ползваш завинаги</p>
+  <a href="#" class="cta-primary" style="max-width:600px; font-size:1.3rem;">⚡ ДА! Искам Freedom Blueprint сега!</a>
+  <p style="color:#555; font-size:0.8rem; margin-top:20px;">ДО СКОРО ВЪТРЕ · ФИЛИП ЙОХАНСЕН</p>
+</div>
+
+<div class="footer-final">
+  <p>© 2026 Freedom Blueprint · Всички права запазени · 30-дневна гаранция за връщане на парите</p>
+  <p style="margin-top:6px;">Резултатите, показани на тази страница, са индивидуални и не представляват средни резултати. Индивидуалните резултати варират.</p>
+</div>
+
+</body>
+</html>
